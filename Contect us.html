@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Social Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for the page */
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(-45deg, #05445E, #189AB4, #75E6DA, #D4F1F4);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite, fadeIn 1s ease-in-out forwards;
+            color: white;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        header {
+            text-align: center;
+            background-color: #673d7600;
+            color: white;
+            padding: 10px 0;
+            animation: slideInDown 1s ease-in-out;
+        }
+
+        @keyframes slideInDown {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #673d7600;
+            color: white;
+            padding: 10px 5px;
+            text-align: center;
+            animation: fadeInFooter 1s ease-in-out;
+        }
+
+        @keyframes fadeInFooter {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        footer .footer-menu {
+            margin: 20px 0;
+        }
+
+        footer .footer-menu a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+
+        footer .footer-menu a:hover {
+            color: #f4a261;
+        }
+
+        footer .social-icons {
+            margin: 20px 0;
+        }
+
+        footer .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        footer .social-icons a:hover {
+            color: #f4a261;
+            transform: scale(1.2);
+        }
+
+        footer p {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        footer p span {
+            font-weight: bold;
+            color: #f4a261;
+        }
+
+        .container {
+            max-width: 800px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation for form fields */
+        input,
+        textarea {
+            color: black;
+            background-color: white;
+            transition: transform 0.3s ease;
+            opacity: 0;
+            animation: slideInLeft 1s ease-in-out forwards;
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(-20px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        button {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background-color: #f4a261;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section (No Links) -->
+    <header class="text-center">
+        <h1>Travel Agency</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <!-- Contact Form -->
+        <form id="contactForm">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
+            Your message has been sent successfully!
+        </div>
+        <div id="errorMessage" class="alert alert-danger mt-3" style="display: none;">
+            Please fill in all fields correctly.
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-menu">
+            <a href="Home.html">Home</a>
+            <a href="#">News</a>
+            <a href="#">About</a>
+            <a href="#">Our Team</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p>&copy; 2024 <span>World Travel Gallery</span>. All Rights Reserved.</p>
+        <p>Designed by <span>AHMED</span></p>
+    </footer>
+
+    <!-- Bootstrap JS and custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript for form validation and handling
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Validate form
+            if (name && email && message) {
+                // Show success message
+                document.getElementById('successMessage').style.display = 'block';
+                document.getElementById('errorMessage').style.display = 'none';
+
+                // Optionally, clear the form
+                document.getElementById('contactForm').reset();
+            } else {
+                // Show error message
+                document.getElementById('errorMessage').style.display = 'block';
+                document.getElementById('successMessage').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

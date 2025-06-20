@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Destination Explorer</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background: linear-gradient(270deg, #05445E, #189AB4, #75E6DA, #D4F1F4);
+      background-size: 800% 800%;
+      animation: gradientShift 20s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* (Same styles below remain unchanged...) */
+
+    header {
+      background-color: #189AB4;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 10px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      font-size: 2em;
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ff6347;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+      z-index: 101;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+
+    .hamburger div {
+      background-color: white;
+      height: 3px;
+      width: 100%;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      width: 100%;
+      z-index: 100;
+      padding: 10px;
+    }
+
+    .mobile-nav li {
+      margin: 20px 0;
+    }
+
+    .mobile-nav a {
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .mobile-nav a:hover {
+      color: #ff6347;
+    }
+
+    .hero {
+      background-image: url('your-image.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .hero-content {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 30px 40px;
+      border-radius: 10px;
+      max-width: 600px;
+      color: white;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero p {
+      font-size: 1.3em;
+      margin-bottom: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    footer {
+      background-color: #189AB4;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      animation: fadeInFooter 2s ease-out;
+    }
+
+    footer .footer-menu {
+      margin: 15px 0;
+    }
+
+    footer .footer-menu a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.3s ease-in-out;
+    }
+
+    footer .footer-menu a:hover {
+      color: #f4a261;
+    }
+
+    footer .social-icons {
+      margin: 15px 0;
+    }
+
+    footer .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 22px;
+      transition: color 0.3s ease-in-out;
+    }
+
+    footer .social-icons a:hover {
+      color: #f4a261;
+    }
+
+    footer p {
+      margin: 10px 0;
+      font-size: 12px;
+      color: #ccc;
+    }
+
+    footer p span {
+      font-weight: bold;
+      color: #f4a261;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-nav {
+        display: flex;
+      }
+
+      .hero h1 {
+        font-size: 2.5em;
+      }
+
+      .hero p {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Travel Destination Explorer</h1>
+    <nav>
+      <ul>
+        <li><a href="view 4 travel.html">Distenation list page</a></li>
+        <li><a href="view travel.html">World Travel Destinations Gallery</a></li>
+        <li><a href="view 3 travel.html">Travel Destination Explorer FAQs</a></li>
+        <li><a href="Contect us.html">Contact Us</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+    <ul class="mobile-nav" id="mobileMenu">
+      <li><a href="view 4 travel.html">Distenation list page</a></li>
+      <li><a href="view travel.html">World Travel Destinations Gallery</a></li>
+      <li><a href=".html">Travel Destination Explorer FAQs</a></li>
+      <li><a href="Contect us.html">Contact Us</a></li>
+    </ul>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to the Travel Destination Explorer</h1>
+      <p>Your next adventure awaits</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-menu">
+      <a href="Home.html">Home</a>
+      <a href="#">News</a>
+      <a href="#">About</a>
+      <a href="Contect us.html">Contact Us</a>
+      <a href="#">Our Team</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2024 <span>World Travel Gallery</span>. All Rights Reserved.</p>
+    <p>Designed by <span>AHMED</span></p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.style.display = (menu.style.display === "flex" ? "none" : "flex");
+    }
+  </script>
+</body>
+</html>
