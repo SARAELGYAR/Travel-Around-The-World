@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Destination Explorer - FAQs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #05445E, #189AB4, #75E6DA, #D4F1F4);
+      color: white;
+      overflow-x: hidden;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    header {
+      text-align: center;
+      background-color: transparent;
+      padding: 20px 0;
+      animation: slideInDown 1s ease-in-out;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: white;
+    }
+
+    @keyframes slideInDown {
+      0% { transform: translateY(-50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .faq {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 10px 0;
+    }
+
+    .faq:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 10px 0;
+      font-weight: bold;
+      color: white;
+      transition: color 0.3s ease;
+      transform: translateX(10px);
+      opacity: 0;
+      animation: fadeInLeft 0.5s forwards;
+    }
+
+    .faq-question:hover {
+      color: #f4a261;
+    }
+
+    @keyframes fadeInLeft {
+      0% { transform: translateX(-20px); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 10px 0;
+      color: #fff;
+      opacity: 0.8;
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    .faq-answer.visible {
+      display: block;
+    }
+
+    .faq-question span:last-child {
+      transition: transform 0.3s ease;
+    }
+
+    .faq-question span:last-child.rotate {
+      transform: rotate(90deg);
+    }
+
+    footer {
+      background-color: transparent;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      animation: fadeInFooter 1s ease-in-out;
+    }
+
+    @keyframes fadeInFooter {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    footer .footer-menu {
+      margin: 20px 0;
+    }
+
+    footer .footer-menu a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.3s ease-in-out, transform 0.3s ease;
+    }
+
+    footer .footer-menu a:hover {
+      color: #f4a261;
+      transform: translateY(-3px);
+    }
+
+    footer .social-icons {
+      margin: 20px 0;
+    }
+
+    footer .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 24px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    footer .social-icons a:hover {
+      color: #f4a261;
+      transform: scale(1.2);
+    }
+
+    footer p {
+      margin: 10px 0;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      animation: fadeInText 1.5s ease-in-out;
+    }
+
+    @keyframes fadeInText {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    footer p span {
+      font-weight: bold;
+      color: #f4a261;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Travel Destination Explorer FAQs</h1>
+  </header>
+
+  <div class="faq-container">
+    <div class="faq">
+      <div class="faq-question">
+        <span>What is Travel Destination Explorer?</span>
+        <span>➤</span>
+      </div>
+      <div class="faq-answer">
+        Travel Destination Explorer is a platform that helps users discover, plan, and explore their dream travel destinations.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">
+        <span>How does the platform recommend destinations?</span>
+        <span>➤</span>
+      </div>
+      <div class="faq-answer">
+        The platform uses advanced algorithms, user preferences, and popular travel trends to recommend personalized destinations.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">
+        <span>Is Travel Destination Explorer free to use?</span>
+        <span>➤</span>
+      </div>
+      <div class="faq-answer">
+        Yes, basic features are free. Premium features like detailed itineraries and expert travel guides are available with a subscription.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">
+        <span>Can I book flights and hotels directly?</span>
+        <span>➤</span>
+      </div>
+      <div class="faq-answer">
+        Yes, you can book flights, hotels, and other travel services directly through our integrated booking system.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">
+        <span>Does Travel Destination Explorer provide travel guides?</span>
+        <span>➤</span>
+      </div>
+      <div class="faq-answer">
+        Yes, we offer detailed travel guides, tips, and recommendations for various destinations worldwide.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">
+        <span>How do I save destinations for future reference?</span>
+        <span>➤</span>
+      </div>
+      <div class="faq-answer">
+        You can save destinations to your personalized travel list by signing into your account on the platform.
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-menu">
+      <a href="Home.html">Home</a>
+      <a href="News.html">News</a>
+      <a href="About.html">About</a>
+      <a href="Contect us.html">Contact Us</a>
+      <a href="#">Our Team</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2024 <span>World Travel Gallery</span>. All Rights Reserved.</p>
+    <p>Designed by <span>AHMED</span></p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach((item) => {
+      item.addEventListener('click', () => {
+        const answer = item.nextElementSibling;
+        const icon = item.querySelector('span:last-child');
+        answer.classList.toggle('visible');
+        icon.classList.toggle('rotate');
+      });
+    });
+  </script>
+
+</body>
+</html>

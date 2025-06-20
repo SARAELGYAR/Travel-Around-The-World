@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel News | Travel Destination Explorer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(270deg, #05445E, #189AB4, #75E6DA, #D4F1F4);
+      background-size: 800% 800%;
+      animation: gradientShift 20s ease infinite;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background-color: #189AB4;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 10px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      font-size: 2em;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ff6347;
+    }
+
+    .news-section {
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .news-article {
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+    }
+
+    .news-article:last-child {
+      border-bottom: none;
+    }
+
+    .news-article h2 {
+      font-size: 1.5em;
+      color: #05445E;
+      margin-bottom: 10px;
+    }
+
+    .news-article p {
+      font-size: 1em;
+      color: #333;
+    }
+
+    .news-article small {
+      display: block;
+      margin-top: 10px;
+      color: #777;
+      font-size: 0.9em;
+    }
+
+    footer {
+      background-color: #189AB4;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    footer .footer-menu a,
+    footer .social-icons a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer .footer-menu a:hover,
+    footer .social-icons a:hover {
+      color: #f4a261;
+    }
+
+    footer p {
+      font-size: 12px;
+      margin-top: 10px;
+      color: #ccc;
+    }
+
+    footer p span {
+      font-weight: bold;
+      color: #f4a261;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Travel News</h1>
+    <nav>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="view 4 travel.html">Destinations</a></li>
+        <li><a href="view travel.html">Gallery</a></li>
+        <li><a href="view 3 travel.html">FAQs</a></li>
+        <li><a href="Contect us.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="news-section">
+    <div class="news-article">
+      <h2>New Visa-Free Travel Agreement Between EU and South America</h2>
+      <p>Several countries in South America have signed a historic agreement with the European Union, allowing visa-free travel for short-term stays starting August 2024. This is expected to boost tourism on both continents significantly.</p>
+      <small>Published: June 18, 2024</small>
+    </div>
+
+    <div class="news-article">
+      <h2>Top 10 Hidden Gems to Explore in 2025</h2>
+      <p>From the untouched islands of the Philippines to the serene valleys of Georgia, travel experts have released a list of lesser-known but breathtaking destinations to add to your 2025 bucket list.</p>
+      <small>Published: June 12, 2024</small>
+    </div>
+
+    <div class="news-article">
+      <h2>Airline Industry Sees Surge in Eco-Friendly Flights</h2>
+      <p>With increasing focus on sustainability, many major airlines are adopting biofuels and offering carbon offset programs. Learn how your next flight could help the planet.</p>
+      <small>Published: June 5, 2024</small>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-menu">
+      <a href="Home.html">Home</a>
+      <a href="#">News</a>
+      <a href="#">About</a>
+      <a href="Contect us.html">Contact Us</a>
+      <a href="#">Our Team</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2024 <span>World Travel Gallery</span>. All Rights Reserved.</p>
+    <p>Designed by <span>AHMED</span></p>
+  </footer>
+
+</body>
+</html>
