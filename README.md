@@ -70,5 +70,8 @@ The site is fully responsive and compatible with:
 - 💻 Laptops
 - 📱 Mobile Phones
 - 📲 Tablets
+# Travel Around The World
+
+Created and customized by **Sara Mostafa** ✈️🌍
 
 
